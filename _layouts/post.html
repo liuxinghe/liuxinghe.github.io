@@ -1,0 +1,38 @@
+{% include header.html %}
+<style type="text/css">
+	pre {width:100%; overflow: auto; overflow-y:hidden;background: hsla(0, 0%, 97%, .7);border: 1px solid #ddd;padding: 1em 1.5em;display: block;-webkit-overflow-scrolling: touch;margin-bottom: 20px;}
+	code {background: hsla(0, 0%, 97%, .7);}
+</style>
+
+<!-- 主体 start -->
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <hr>
+
+      <div class="blog-post">
+        <h1 class="blog-post-title">{{ page.title }}</h1>
+        <p class="blog-post-meta">{{ page.date | date: "%Y-%m-%d" }} by <a href="#">{{ page.author }}</a></p>
+
+        <p>{{ page.description }}</p>
+        <hr>
+        {{ content }}
+      </div>
+
+      <nav class="blog-pagination">
+      	{% if page.previous %}
+        <a class="btn btn-outline-primary" href="{{ page.previous.url }}">Older</a>
+        {% endif %}
+        {% if page.next %}
+        <a class="btn btn-outline-secondary">Newer</a>
+        {% endif %}
+      </nav>
+
+    </div>
+
+    {% include side-nav.html %}
+  </div>
+</main>
+<!-- 主体 end -->
+
+{% include footer.html %}
