@@ -1,0 +1,59 @@
+<!-- 底部 start -->
+<footer class="row">
+	<div class="large-6 columns">
+		<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> <a href="/">超纳网络</a>. All Rights Reserved.</p>
+	</div>
+	<div class="large-6 columns">
+		<ul class="inline-list">
+			<li><a href="/">超纳网络</a></li>
+		</ul>
+	</div>
+</footer>
+<!-- 底部 end -->
+<script src="https://cdn.bootcss.com/foundation/4.0.4/js/vendor/custom.modernizr.min.js"></script>
+<script src="https://cdn.bootcss.com/foundation/4.0.4/js/vendor/zepto.min.js"></script>
+<script src="https://cdn.bootcss.com/foundation/4.0.4/js/foundation.min.js"></script>
+<!-- 初始化 Foundation JS -->
+<script>
+	$(document).ready(function() {
+	    $(document).foundation();
+	})
+</script>
+</body>
+</html>
+
+<!-- 底部 start -->
+<footer class="blog-footer">
+  <p>Blog template built for <a href="javascript:window.open('https://getbootstrap.com/');">Bootstrap</a> by <a href="javascript:window.open('https://twitter.com/mdo');">@mdo</a>.</p>
+  <p id="sitetime"></p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
+<!-- 底部 end -->
+
+<script type="text/javascript">
+	function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth();
+        var todayDate = today.getDate();
+
+        var t1 = Date.UTC(2016, 7, 8);
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate);
+        var diff = t2 - t1;
+
+        var diffDays = Math.floor(diff / days);
+        document.getElementById("sitetime").innerHTML = diffDays + " 天 ";
+    }
+
+    siteTime();
+</script>    
+  </body>
+</html>
