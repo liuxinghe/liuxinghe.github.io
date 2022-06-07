@@ -3,10 +3,9 @@
 <main role="main" class="container">
   <div class="row">
     <div class="col-md-8 blog-main">
-      <hr>
       
       {% for post in site.categories.[page.category] %}
-      <div class="blog-post">
+      <div class="blog-post border border-right-0 border-bottom-0  border-left-0">
         <h2 class="blog-post-title">{{ post.title }}</h2>
         <p class="blog-post-meta">{{ post.date | date: "%Y-%m-%d" }} by <a href="#">{{ post.author }}</a></p>
 
