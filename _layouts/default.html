@@ -18,11 +18,11 @@
 
       {% for post in paginator.posts %} 
         <div class="blog-post">
-          <h2 class="blog-post-title">{{ post.title }}</h2>
+          <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
           <p class="blog-post-meta">{{ post.date | date: "%Y-%m-%d" }} by <a href="#">{{ post.author }}</a></p>
 
           <p>{{ post.excerpt }}</p>
-          <p class="lead mb-0"><a href="{{ post.url }}" class="font-weight-bold">Continue reading...</a></p>
+          <!-- <p class="lead mb-0"><a href="{{ post.url }}" class="font-weight-bold">Continue reading...</a></p> -->
         </div>
       {% endfor %}
 
