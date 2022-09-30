@@ -5,7 +5,7 @@
     <div class="col-md-6 px-0">
       <h1 class="display-4 font-italic">刘星河个人博客</h1>
       <p class="lead my-3">天玲声声动听，星河颗颗传情。每个男人心中都有一个武侠梦，所以健身与武侠幻想一下......</p>
-      <p class="lead mb-0"><a href="/about" class="text-white font-weight-bold">Continue reading...</a></p>
+      <p class="lead mb-0"><a href="/about" class="text-white font-weight-bold">继续阅读...</a></p>
     </div>
   </div>
 </div>
@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-md-8 blog-main">
       <h3 class="pb-4 mb-4 font-italic border-bottom">
-        Latest Blog Posts
+        最新文章
       </h3>
 
       {% for post in paginator.posts %} 
@@ -28,10 +28,10 @@
 
       <nav class="blog-pagination">
         {% if paginator.previous_page %}
-        <a class="btn btn-outline-primary" href="{{ paginator.previous_page_path }}">Older</a>
+        <a class="btn btn-outline-primary" href="{{ paginator.previous_page_path }}">上一页</a>
         {% endif %}
         {% if paginator.next_page %}
-        <a class="btn btn-outline-secondary" href="{{ paginator.next_page_path }}">Newer</a>
+        <a class="btn btn-outline-secondary" href="{{ paginator.next_page_path }}">下一页</a>
         {% endif %}
       </nav>   
 
