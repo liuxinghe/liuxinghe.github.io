@@ -1,14 +1,96 @@
 {% include header.html %}
 
-<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+<div class="jumbotron p-4 p-md-5 text-white rounded" style="background-color: #0A242C;">
   <div class="container">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">刘星河个人博客</h1>
-      <p class="lead my-3">天玲声声动听，星河颗颗传情。每个男人心中都有一个武侠梦，所以健身与武侠幻想一下......</p>
-      <p class="lead mb-0"><a href="/about" class="text-white font-weight-bold">继续阅读...</a></p>
+      <h1 class="display-4 font-italic">刘星河 非著名金融学者</h1>
+      <p class="lead my-3">了解专业投资者的秘密，实现财务独立。只需学习、树立和培养财富观，成功地增加你的钱......</p>
+      <p class="lead mb-0"><a href="#liuxinghe" class="text-white font-weight-bold">从这里开始</a></p>
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+        <h2 id="liuxinghe" style="padding: 50px 0 30px;"> <span style="
+border-style: solid;
+border-top-width: 0;
+border-left-width: 0;
+border-right-width: 0; 
+border-bottom-width: 10px;
+border-bottom-color: #5BB85D !important;">　刘星河是谁？　</span></h2>
+    </div>
+
+    <div class="col-sm-6">
+      <img style="max-width: 100%;" src="https://bernd-reintgen.de/wp-content/uploads/2022/02/br-profil-3_neu-600x804-siegel22.png" class="img-responsive center-block" alt="Cinque Terre">
+    </div>
+    <div class="col-sm-6">     
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron p-4 p-md-5 text-white rounded" style="background-color: #0A242C;margin-top: 50px;font-size: 1.5rem;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 text-center" >
+        <div><i class="bi-book" style="font-size: 7rem; color: green;"></i></div>
+        <div>讲课内容</div>
+        <div style="font-size: 2rem; color: green;">100+</div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div><i class="bi-people" style="font-size: 7rem; color: purple;"></i></div>
+        <div>与会者</div>
+        <div style="font-size: 2rem; color: purple;">200+</div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div><i class="bi-piggy-bank" style="font-size: 7rem; color: yellow;"></i></div>
+        <div>经验丰富</div>
+        <div style="font-size: 2rem; color: yellow;">200+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+        <h2 style="padding: 50px 0 30px;"> <span style="
+border-style: solid;
+border-top-width: 0;
+border-left-width: 0;
+border-right-width: 0; 
+border-bottom-width: 10px;
+border-bottom-color: #5BB85D !important;">　博客文章　</span></h2>
+    </div>
+    {% for post in paginator.posts limit:3 %} 
+    <div class="col-sm-4">
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+      <p>{{ post.author }} | {{ post.date | date: "%Y-%m-%d" }}</p>
+    </div>
+    {% endfor %}
+    <!-- <div class="col-sm-4">
+      <h3><a href="">第二列</a></h3>
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+      <p>刘星河 | 2022-10-05</p>
+    </div>
+    <div class="col-sm-4">
+      <h3><a href="">第三列</a></h3>        
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+      <p>刘星河 | 2022-10-05</p>
+    </div> -->
+    <div class="col-sm-12 text-center" style="padding-top: 30px;">
+        <a href="/jinrong/" type="button" class="btn btn-success btn-lg">阅读所有文章</a>
+    </div>
+  </div>
+</div>
+
+
 <main role="main" class="container">
   <div class="row">
     <div class="col-md-8 blog-main">
@@ -16,7 +98,7 @@
         最新文章
       </h3>
 
-      {% for post in paginator.posts %} 
+      {% for post in paginator.posts offset:3 limit:3 %} 
         <div class="blog-post">
           <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
           <p class="blog-post-meta">{{ post.date | date: "%Y-%m-%d" }} by <a href="#">{{ post.author }}</a></p>
