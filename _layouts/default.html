@@ -90,39 +90,4 @@ border-bottom-color: #5BB85D !important;">　博客文章　</span></h2>
   </div>
 </div>
 
-
-<main role="main" class="container">
-  <div class="row">
-    <div class="col-md-8 blog-main">
-      <h3 class="pb-4 mb-4 font-italic border-bottom">
-        最新文章
-      </h3>
-
-      {% for post in paginator.posts offset:3 limit:3 %} 
-        <div class="blog-post">
-          <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p class="blog-post-meta">{{ post.date | date: "%Y-%m-%d" }} by <a href="#">{{ post.author }}</a></p>
-
-          <p>{{ post.excerpt }}</p>
-          <!-- <p class="lead mb-0"><a href="{{ post.url }}" class="font-weight-bold">Continue reading...</a></p> -->
-        </div>
-      {% endfor %}
-
-      <nav class="blog-pagination">
-        {% if paginator.previous_page %}
-        <a class="btn btn-outline-primary" href="{{ paginator.previous_page_path }}">上一页</a>
-        {% endif %}
-        {% if paginator.next_page %}
-        <a class="btn btn-outline-secondary" href="{{ paginator.next_page_path }}">下一页</a>
-        {% endif %}
-      </nav>   
-
-    </div>
-
-    {% include aside.html %}
-
-  </div>
-
-</main>
-
 {% include footer.html %}
