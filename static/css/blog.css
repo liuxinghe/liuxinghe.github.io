@@ -145,3 +145,15 @@ h6 {
   font-size: 1rem;
 }
 
+/*
+ * 博客文章h3小标题
+ */
+h3 span {
+  display: block;
+  width: 5px;
+  height: 1.3rem;
+  background-color: #5BB85D;
+  float:left;
+  padding: 5px 0;
+  margin-right: 5px;
+}
