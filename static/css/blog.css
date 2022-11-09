@@ -131,30 +131,33 @@ h1, h2, h3, h4, h5, h6 {
  */
 h2 {
   font-size: 1.4rem;
+  line-height: 50px;
 }
 h3 {
   font-size: 1.3rem;
+  line-height: 50px;
 }
 h4 {
   font-size: 1.2rem;
+  line-height: 50px;
 }
 h5 {
   font-size: 1.1rem;
+  line-height: 50px;
 }
 h6 {
   font-size: 1rem;
+  line-height: 50px;
 }
 
 /*
  * 博客文章h3小标题
  */
 h3 span {
-  display: block;
   width: 5px;
-  height: 1.3rem;
+  height: 50px;
   background-color: #5BB85D;
   float: left;
-  padding: 14px 0;
   margin-right: 5px;
   margin-left: 2px;
 }
