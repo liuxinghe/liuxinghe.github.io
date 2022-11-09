@@ -71,7 +71,7 @@ border-bottom-color: #5BB85D !important;">　博客文章　</span></h2>
     {% for post in paginator.posts limit:3 %} 
     <div class="col-sm-4">
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt }}</p>
+      {{ post.excerpt }}
       <p>{{ post.author }} | {{ post.date | date: "%Y-%m-%d" }}</p>
     </div>
     {% endfor %}

@@ -9,7 +9,7 @@
         <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <p class="blog-post-meta">{{ post.date | date: "%Y-%m-%d" }} by <a href="javascript:;">{{ post.author }}</a></p>
 
-        <p>{{ post.excerpt }}</p>
+        {{ post.excerpt }}
         <!-- <p class="lead mb-0"><a href="{{ post.url }}" class="font-weight-bold">Continue reading...</a></p> -->
       </div>
       {% endfor %}
