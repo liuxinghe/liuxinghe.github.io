@@ -9,7 +9,7 @@
 
       <div class="blog-post border border-right-0 border-bottom-0  border-left-0">
         <h1 class="blog-post-title">{{ page.title }}</h1>
-        <p class="blog-post-meta">{{ page.date | date: "%Y-%m-%d" }} by <a href="javascript:;">{{ page.author }}</a></p>
+        <p class="blog-post-meta">{{ page.date | date: "%Y-%m-%d" }} | <a href="javascript:;">{{ page.author }}</a></p>
         {{ content }}
       </div>
 
@@ -22,6 +22,9 @@
         {% endif %}
       </nav>
 
+      <div id="vcomments"></div>
+      <noscript> 为正常使用评论功能请激活JavaScript</noscript>
+
     </div>
 
     {% include aside.html %}
@@ -29,5 +32,28 @@
   </div>
 
 </main>
+
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+<script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+
+<script type="text/javascript">
+  // 评论
+  var GUEST = ['nick','mail','link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function (item) {
+    return GUEST.indexOf(item)>-1;
+  });
+  new Valine({
+      el: '#vcomments' ,
+      appId: 'p8zTi79yoJB6TIU6N53HXLRJ-gzGzoHsz',
+      appKey: 'BRrjnXAd4aDD5tPEVcryWSBA',
+      placeholder: '欢迎你的评论吧~',
+      avatar:'mp',
+      guest_info:guest,
+      pageSize:'10' || 10,
+      visitor: true, // 阅读量统计
+  });
+</script>
 
 {% include footer.html %}
