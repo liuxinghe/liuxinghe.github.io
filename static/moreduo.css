@@ -112,7 +112,7 @@ main section{
 .title{
     margin-bottom: 1em;
 }
-.title:before{
+/*.title:before{
     float: left;
     margin-right: .5em;
     font-family: "FontAwesome";
@@ -136,10 +136,10 @@ main section{
 
 #up .title:before{
     content: "\f164";
-}
+}*/
 
 /* - 技能 */
-.skills-icon{
+/*.skills-icon{
     width: 100px;
     height: 100px;
     margin: 0 auto;
@@ -158,7 +158,7 @@ main section{
 .skills-title{
     margin-top: 1.5em;
     text-align: center;
-}
+}*/
 
 /* - 作品 */
 .works-item img{
